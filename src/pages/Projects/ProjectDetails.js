@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
 import { useParams, Link } from 'react-router-dom';
 import { projectsData } from '../../constants/projectData';
 import styles from './ProjectDetails.module.css';
 import { FaArrowLeft, FaCheckCircle, FaRocket } from 'react-icons/fa';
 import { updateSeo } from '../../utils/seoHelper';
+=======
+import { useParams } from 'react-router-dom';
+import projectService from '../../services/projectService';
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
 
 function ProjectDetails() {
   const { slug } = useParams();
   const [project, setProject] = useState(null);
+<<<<<<< HEAD
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -29,12 +35,33 @@ function ProjectDetails() {
         <div className={styles.container} style={{ textAlign: 'center' }}>
           <p>Loading project details...</p>
         </div>
+=======
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    const loadProject = async () => {
+      try {
+        const data = await projectService.fetchProjectBySlug(slug);
+        setProject(data);
+      } catch (err) {
+        setError('Unable to load project.');
+      }
+    };
+    loadProject();
+  }, [slug]);
+
+  if (error) {
+    return (
+      <section style={{ padding: '2rem' }}>
+        <h1>{error}</h1>
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
       </section>
     );
   }
 
   if (!project) {
     return (
+<<<<<<< HEAD
       <section className={styles.detailsPage}>
         <div className={styles.container} style={{ textAlign: 'center' }}>
           <h1>🚧 Project Not Found</h1>
@@ -45,11 +72,16 @@ function ProjectDetails() {
             <FaArrowLeft /> Back to Projects
           </Link>
         </div>
+=======
+      <section style={{ padding: '2rem' }}>
+        <p>Loading project…</p>
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
       </section>
     );
   }
 
   return (
+<<<<<<< HEAD
     <main className={styles.detailsPage}>
       <div className={styles.container}>
         <Link to="/projects" className={styles.backBtn}>
@@ -101,6 +133,18 @@ function ProjectDetails() {
         </div>
       </div>
     </main>
+=======
+    <article style={{ padding: '2rem', background: '#fff', borderRadius: '12px' }}>
+      <h1>{project.title}</h1>
+      <p>{project.description}</p>
+      <p><strong>Technologies:</strong> {project.technologies.join(', ')}</p>
+      <div style={{ display: 'grid', gap: '0.75rem' }}>
+        {project.images.map((image) => (
+          <img key={image} src={image} alt={project.title} style={{ width: '100%', maxWidth: '500px', borderRadius: '8px' }} />
+        ))}
+      </div>
+    </article>
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
   );
 }
 

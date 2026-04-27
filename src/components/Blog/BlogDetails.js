@@ -1,20 +1,29 @@
 import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
 import { useParams, Link } from 'react-router-dom';
 import api from '../../services/api';
 import { blogData } from '../../constants/blogData';
 import styles from './BlogDetails.module.css';
 import { updateSeo } from '../../utils/seoHelper';
 import { FaArrowLeft, FaCalendarAlt, FaTag } from 'react-icons/fa';
+=======
+import { useParams } from 'react-router-dom';
+import api from '../../services/api';
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
 
 function BlogDetails() {
   const { slug } = useParams();
   const [blog, setBlog] = useState(null);
+<<<<<<< HEAD
   const [loading, setLoading] = useState(true);
+=======
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
 
   useEffect(() => {
     const fetchBlog = async () => {
       try {
         const res = await api.get(`/blogs/${slug}`);
+<<<<<<< HEAD
         if (res.data) {
           setBlog(res.data);
           updateSeo({
@@ -34,10 +43,16 @@ function BlogDetails() {
         }
       } finally {
         setLoading(false);
+=======
+        setBlog(res.data);
+      } catch (err) {
+        console.error(err.message);
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
       }
     };
 
     fetchBlog();
+<<<<<<< HEAD
     window.scrollTo(0, 0);
   }, [slug]);
 
@@ -99,6 +114,31 @@ function BlogDetails() {
         </div>
       </div>
     </main>
+=======
+  }, [slug]);
+
+  if (!blog) return <h2>Loading...</h2>;
+
+  return (
+    <div style={{ padding: '2rem', maxWidth: '900px', margin: 'auto' }}>
+      
+      <img
+        src={blog.image}
+        alt={blog.title}
+        style={{
+          width: '100%',
+          height: '400px',
+          objectFit: 'cover',
+          borderRadius: '12px',
+          marginBottom: '1rem'
+        }}
+      />
+
+      <h1>{blog.title}</h1>
+      <p>{blog.content}</p>
+
+    </div>
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
   );
 }
 

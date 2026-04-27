@@ -1,9 +1,14 @@
 .aboutPage {
+<<<<<<< HEAD
   background: #F7F9FC;
+=======
+  font-family: 'Poppins', sans-serif;
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
 }
 
 /* HERO */
 .hero {
+<<<<<<< HEAD
   background: linear-gradient(135deg, #0B1F3A 0%, #1E3A8A 100%);
   padding: 140px 0 90px;
   text-align: center;
@@ -124,10 +129,31 @@
   margin-bottom: 80px; /* ✅ ADDED SPACING FROM FOOTER AS REQUESTED */
   border-radius: 30px;
   max-width: 1320px;
+=======
+  background: linear-gradient(135deg, #020617, #0f172a, #1e3a8a);
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.heroContent h1 {
+  font-size: 48px;
+}
+
+.heroContent span {
+  color: #60a5fa;
+}
+
+.heroContent p {
+  margin-top: 20px;
+  color: #cbd5f5;
+  max-width: 700px;
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
   margin-left: auto;
   margin-right: auto;
 }
 
+<<<<<<< HEAD
 .cta h2 {
   font-size: 3rem;
   margin-bottom: 20px;
@@ -161,4 +187,77 @@
     border-radius: 0;
     padding: 60px 24px;
   }
+=======
+/* SECTION */
+.section {
+  padding: 100px 20px;
+}
+
+.sectionAlt {
+  padding: 100px 20px;
+  background: #eef2ff;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.containerGrid {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+/* VALUES */
+.valuesGrid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.valueCard {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.valueCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* CTA */
+.cta {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .containerGrid,
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
 }

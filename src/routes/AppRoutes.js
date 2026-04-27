@@ -23,8 +23,11 @@
   import Careers from '../pages/Careers/Careers';
   import Contact from '../pages/Contact/Contact';
   import GetQuote from '../pages/Contact/GetQuote';
+<<<<<<< HEAD
   import PrivacyPolicy from '../pages/PrivacyPolicy/PrivacyPolicy';
   import TermsAndConditions from '../pages/TermsAndConditions/TermsAndConditions';
+=======
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
   import AdminLogin from '../pages/Auth/AdminLogin';
   import Dashboard from '../pages/Admin/Dashboard';
   import ManageBlogs from '../pages/Admin/ManageBlogs';
@@ -63,8 +66,11 @@
           <Route path="careers" element={<Careers />} />
           <Route path="contact" element={<Contact />} />
           <Route path="get-quote" element={<GetQuote />} />
+<<<<<<< HEAD
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="terms-and-conditions" element={<TermsAndConditions />} />
+=======
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
         </Route>
 
         {/* ADMIN */}

@@ -1,4 +1,5 @@
 :root {
+<<<<<<< HEAD
   /* COLOR PALETTE */
   --primary-deep: #0B1F3A;
   --primary-royal: #1E3A8A;
@@ -35,4 +36,22 @@
   --primary-light: var(--primary-highlight);
   --primary-glow: rgba(37, 99, 235, 0.2);
   --border: var(--border-light);
+=======
+  /* BACKGROUND */
+  --bg-main: #0b0b0f;
+  --bg-secondary: #111115;
+  --bg-card: rgba(255, 255, 255, 0.05);
+
+  /* PRIMARY (ORANGE) */
+  --primary: #ff7a18;
+  --primary-light: #ff9a3c;
+  --primary-glow: rgba(255, 122, 24, 0.4);
+
+  /* TEXT */
+  --text-main: #ffffff;
+  --text-secondary: #a1a1aa;
+
+  /* BORDER */
+  --border: rgba(255, 255, 255, 0.08);
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
 }

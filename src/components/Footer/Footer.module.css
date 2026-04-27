@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .footer {
   background: #0B1F3A;
   color: #E2E8F0;
@@ -34,6 +35,41 @@
   color: #FFFFFF;
   margin-bottom: 24px;
   font-size: 1.1rem;
+=======
+/* ROOT */
+.footer {
+  background: #020617;
+  color: #94a3b8;
+  padding-top: 70px;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  padding: 0 20px 50px;
+}
+
+/* BRAND */
+.brand h2 {
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.brand p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* LINKS */
+.links h3,
+.contact h3 {
+  color: #fff;
+  margin-bottom: 12px;
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
 }
 
 .links ul {
@@ -42,6 +78,7 @@
 }
 
 .links li {
+<<<<<<< HEAD
   margin-bottom: 12px;
   color: #94A3B8;
   cursor: pointer;
@@ -123,4 +160,75 @@
     flex-direction: column;
     text-align: center;
   }
+=======
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.links li:hover {
+  color: #2563eb;
+}
+
+/* CONTACT */
+.contact p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* BOTTOM */
+.bottom {
+  border-top: 1px solid #1e293b;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* ================= MOBILE (≤576px) ================= */
+@media (max-width: 576px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .brand p {
+    font-size: 13px;
+  }
+
+  .links li,
+  .contact p {
+    font-size: 13px;
+  }
+}
+
+/* ================= TABLET (577px - 900px) ================= */
+@media (min-width: 577px) and (max-width: 900px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    text-align: left;
+  }
+}
+
+/* ================= SMALL LAPTOP (901px - 1200px) ================= */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+}
+
+/* ================= LARGE SCREENS (1200px+) ================= */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1300px;
+  }
+}
+.footer {
+  background: #0f172a; /* deep navy */
+  color: #e5e7eb;
+  padding: 3rem 1.5rem 1rem;
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
 }

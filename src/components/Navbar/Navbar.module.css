@@ -2,6 +2,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+<<<<<<< HEAD
   background: rgba(11, 31, 58, 0.95); /* Deep Navy semi-transparent by default */
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -23,12 +24,24 @@
   max-width: 1320px;
   margin: auto;
   padding: 0 24px;
+=======
+  backdrop-filter: blur(12px);
+  background: rgba(15, 23, 42, 0.75);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 14px 20px;
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo a {
+<<<<<<< HEAD
   font-size: 1.6rem;
   font-weight: 800;
   color: #FFFFFF;
@@ -39,11 +52,19 @@
 
 .logo a:hover {
   color: var(--primary-highlight);
+=======
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
 }
 
 /* NAV LINKS */
 .navLinks {
   display: flex;
+<<<<<<< HEAD
   gap: 32px;
 }
 
@@ -69,12 +90,36 @@
 
 .navLinks a:hover {
   color: #FFFFFF;
+=======
+  gap: 28px;
+}
+
+.navLinks a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 15px;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* HOVER UNDERLINE ANIMATION */
+.navLinks a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: #3b82f6;
+  transition: 0.3s;
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
 }
 
 .navLinks a:hover::after {
   width: 100%;
 }
 
+<<<<<<< HEAD
 /* ACTIVE LINK */
 .active {
   color: #FFFFFF !important;
@@ -83,10 +128,24 @@
 
 .active::after {
   width: 100% !important;
+=======
+.navLinks a:hover {
+  color: white;
+}
+
+/* ACTIVE LINK */
+.active {
+  color: white;
+}
+
+.active::after {
+  width: 100%;
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
 }
 
 /* CTA BUTTON */
 .cta {
+<<<<<<< HEAD
   padding: 10px 24px;
   background: linear-gradient(135deg, var(--primary-accent), var(--primary-highlight));
   border: none;
@@ -97,35 +156,70 @@
   transition: var(--transition);
   font-size: 0.9rem;
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+=======
+  padding: 8px 18px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
 }
 
 .cta:hover {
   transform: translateY(-2px);
+<<<<<<< HEAD
   box-shadow: 0 6px 18px rgba(37, 99, 235, 0.4);
   filter: brightness(1.1);
+=======
+  box-shadow: 0 6px 20px rgba(59,130,246,0.4);
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
 }
 
 /* RIGHT SIDE */
 .right {
   display: flex;
   align-items: center;
+<<<<<<< HEAD
   gap: 20px;
+=======
+  gap: 15px;
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
 }
 
 /* MOBILE */
 .menuToggle {
   display: none;
+<<<<<<< HEAD
   font-size: 1.5rem;
+=======
+  font-size: 22px;
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
   color: white;
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 @media (max-width: 992px) {
   .navLinks {
+=======
+@media (max-width: 768px) {
+  .navLinks {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #0f172a;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
     display: none;
   }
 
   .navLinks.open {
+<<<<<<< HEAD
     position: fixed;
     top: 0;
     left: 0;
@@ -144,10 +238,14 @@
   .navLinks.open a {
     font-size: 1.5rem;
     color: white;
+=======
+    display: flex;
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
   }
 
   .menuToggle {
     display: block;
+<<<<<<< HEAD
     position: relative;
     z-index: 1001;
   }
@@ -155,4 +253,21 @@
   .cta {
     display: none;
   }
+=======
+  }
+}
+.logo img {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+
+  /* optional glow (matches your logo style) */
+  filter: drop-shadow(0 0 6px rgba(37, 99, 235, 0.5));
+
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
 }

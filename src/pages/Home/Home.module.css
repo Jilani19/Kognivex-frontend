@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ================= HERO SECTION ================= */
 .hero {
   background: linear-gradient(135deg, #0B1F3A 0%, #1E3A8A 100%);
@@ -186,4 +187,204 @@
   .subtitle { font-size: 2.5rem; }
   .testimonialCard { padding: 40px 20px; }
   .testimonialText { font-size: 1.1rem; }
+=======
+.home {
+  font-family: 'Poppins', sans-serif;
+  background: #f8fafc;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.heroContent h1 {
+  font-size: 48px;
+}
+
+.heroContent span {
+  color: #60a5fa;
+}
+
+.heroContent p {
+  margin-top: 20px;
+  color: #cbd5f5;
+}
+
+.heroBtns {
+  margin-top: 30px;
+}
+
+/* BUTTON */
+.primaryBtn {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+  padding: 12px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(37,99,235,0.4);
+}
+
+.secondaryBtn {
+  margin-left: 10px;
+  padding: 12px 26px;
+  border-radius: 8px;
+  border: 1px solid white;
+  color: white;
+}
+
+/* SECTION */
+.section,
+.sectionAlt {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.sectionAlt {
+  background: #eef2ff;
+}
+
+/* GRID */
+.grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border: 2px solid #2563eb;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+}
+
+.card svg {
+  font-size: 30px;
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+/* PROCESS */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.step {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.step:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* TESTIMONIAL */
+.testimonialCard {
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  margin: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.testimonialCard:hover {
+  transform: scale(1.03);
+}
+
+/* CTA */
+.cta {
+  background: #0f172a;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .grid,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* SEO SECTION NEW */
+.seoSection {
+  padding: 80px 20px;
+  background: #f8fafc;
+}
+
+.seoWrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* LEFT */
+.seoLeft h2 {
+  font-size: 32px;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+.seoLeft p {
+  color: #64748b;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+/* RIGHT CARD */
+.highlightCard {
+  background: linear-gradient(135deg, #2563eb, #0ea5e9);
+  color: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(37,99,235,0.2);
+}
+
+.highlightCard h3 {
+  margin-bottom: 15px;
+}
+
+.highlightCard ul {
+  list-style: none;
+  padding: 0;
+}
+
+.highlightCard li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .seoWrapper {
+    grid-template-columns: 1fr;
+  }
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
 }

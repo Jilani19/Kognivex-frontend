@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './BlogCard.module.css';
+<<<<<<< HEAD
 import { FaArrowRight, FaCalendarAlt } from 'react-icons/fa';
 
 function BlogCard({ blog }) {
@@ -33,6 +34,39 @@ function BlogCard({ blog }) {
         </Link>
       </div>
     </article>
+=======
+
+function BlogCard({ blog }) {
+  return (
+    <div className={styles.card}>
+      
+      {/* ✅ SAFE IMAGE */}
+      <img 
+        src={blog.image || "https://via.placeholder.com/400x200"} 
+        alt={blog.title} 
+        className={styles.image} 
+      />
+
+      <div className={styles.meta}>
+        <span>{blog.category}</span>
+
+        {/* ✅ DATE FORMAT FIX */}
+        <span>
+          {blog.createdAt 
+            ? new Date(blog.createdAt).toLocaleDateString() 
+            : ""}
+        </span>
+      </div>
+
+      <h3>{blog.title}</h3>
+      <p>{blog.excerpt}</p>
+
+      {/* ✅ SLUG SAFE */}
+      <Link to={`/blog/${blog.slug}`} className={styles.cta}>
+        Read More →
+      </Link>
+    </div>
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
   );
 }
 

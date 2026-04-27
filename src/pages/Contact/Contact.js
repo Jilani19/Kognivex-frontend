@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { updateSeo } from '../../utils/seoHelper';
 import emailjs from '@emailjs/browser';
 import { assertEmailJsConfig } from '../../constants/emailjs';
+<<<<<<< HEAD
 import styles from './Contact.module.css';
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
+=======
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
 
 function Contact() {
   const [form, setForm] = useState({
@@ -18,8 +21,13 @@ function Contact() {
 
   useEffect(() => {
     updateSeo({
+<<<<<<< HEAD
       title: 'Contact | Kognivex Support',
       description: 'Get in touch with Kognivex for your next software project. Our engineering team is ready to discuss your requirements.',
+=======
+      title: 'Contact - Kognivex',
+      description: 'Contact Kognivex for partnerships and development services.',
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
     });
   }, []);
 
@@ -29,6 +37,10 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+<<<<<<< HEAD
+=======
+
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
     setLoading(true);
     setStatus('');
 
@@ -55,7 +67,16 @@ function Contact() {
     )
     .then(() => {
       setStatus('✅ Message sent successfully!');
+<<<<<<< HEAD
       setForm({ name: '', email: '', phone: '', message: '' });
+=======
+      setForm({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
     })
     .catch((error) => {
       console.error('EmailJS send failed:', error);
@@ -67,6 +88,7 @@ function Contact() {
   };
 
   return (
+<<<<<<< HEAD
     <main className={styles.contactPage}>
       {/* HERO */}
       <section className={styles.hero}>
@@ -97,10 +119,48 @@ function Contact() {
 
             <div className={styles.note}>
               Our engineering leads usually respond to inquiries within 1 business day.
+=======
+    <section style={{ padding: '2rem', background: '#f8fafc', minHeight: '100vh' }}>
+
+      <div style={{ maxWidth: '1100px', margin: 'auto', display: 'grid', gap: '2rem' }}>
+
+        {/* HEADER */}
+        <div style={{ textAlign: 'center' }}>
+          <h1>Contact Us</h1>
+          <p style={{ color: '#64748b' }}>
+            Let’s discuss your project or idea. We’ll help you build scalable solutions.
+          </p>
+        </div>
+
+        {/* GRID */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+
+          {/* LEFT INFO */}
+          <div style={{
+            background: '#fff',
+            padding: '30px',
+            borderRadius: '16px',
+            border: '1px solid #e5e7eb'
+          }}>
+            <h2>Get in Touch</h2>
+
+            <p style={{ marginTop: '10px', color: '#64748b' }}>
+              Reach out for web apps, SaaS platforms, or enterprise solutions.
+            </p>
+
+            <div style={{ marginTop: '20px', lineHeight: '1.8' }}>
+              <p><strong>Email:</strong> info.kognivex@gmail.com</p>
+              <p><strong>Phone:</strong> +91 93817 97198</p>
+            </div>
+
+            <div style={{ marginTop: '20px', color: '#94a3b8' }}>
+              We usually respond within 24 hours.
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
             </div>
           </div>
 
           {/* FORM */}
+<<<<<<< HEAD
           <form onSubmit={handleSubmit} className={styles.form}>
             <h2>Send a Message</h2>
             
@@ -153,10 +213,64 @@ function Contact() {
                 className={`${styles.input} ${styles.textarea}`}
               />
             </div>
+=======
+          <form
+            onSubmit={handleSubmit}
+            style={{
+              background: '#fff',
+              padding: '30px',
+              borderRadius: '16px',
+              display: 'grid',
+              gap: '15px',
+              border: '1px solid #e5e7eb'
+            }}
+          >
+            <h2>Send a Message</h2>
+
+            <input
+              type="text"
+              name="name"
+              placeholder="Full Name"
+              value={form.name}
+              onChange={handleChange}
+              required
+              style={inputStyle}
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              value={form.email}
+              onChange={handleChange}
+              required
+              style={inputStyle}
+            />
+
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone Number"
+              value={form.phone}
+              onChange={handleChange}
+              style={inputStyle}
+            />
+
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              value={form.message}
+              onChange={handleChange}
+              required
+              rows="5"
+              style={inputStyle}
+            />
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
 
             <button
               type="submit"
               disabled={loading}
+<<<<<<< HEAD
               className={styles.submitBtn}
             >
               {loading ? 'Sending...' : 'Send Message'} <FaPaperPlane style={{marginLeft: '8px'}} />
@@ -172,4 +286,38 @@ function Contact() {
   );
 }
 
+=======
+              style={{
+                padding: '12px',
+                background: loading ? '#94a3b8' : '#2563eb',
+                color: '#fff',
+                border: 'none',
+                borderRadius: '8px',
+                cursor: 'pointer'
+              }}
+            >
+              {loading ? 'Sending...' : 'Send Message'}
+            </button>
+
+            {status && (
+              <p style={{ textAlign: 'center' }}>{status}</p>
+            )}
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+  );
+}
+
+const inputStyle = {
+  padding: '12px',
+  borderRadius: '8px',
+  border: '1px solid #d1d5db',
+  outline: 'none'
+};
+
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
 export default Contact;

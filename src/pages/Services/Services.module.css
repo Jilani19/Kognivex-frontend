@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .servicesPage {
   background: #F7F9FC;
 }
@@ -63,11 +64,104 @@
   margin-bottom: 16px;
   color: #0F172A;
   font-weight: 800;
+=======
+/* ================= ROOT ================= */
+.servicesPage {
+  font-family: 'Inter', sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* ================= HERO ================= */
+.hero {
+  background: linear-gradient(135deg, #020617, #0f172a, #1e3a8a);
+  color: white;
+  padding: 140px 20px 100px;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: auto;
+}
+
+.heroContent h1 {
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.heroContent span {
+  color: #60a5fa;
+}
+
+.heroContent p {
+  margin-top: 16px;
+  color: #cbd5f5;
+  font-size: 18px;
+}
+
+.heroSub {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* BADGES */
+.heroBadges {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.heroBadges span {
+  background: rgba(255,255,255,0.1);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* ================= GAP ================= */
+.heroGap {
+  height: 100px;
+  background: #ffffff;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+/* ================= INTRO ================= */
+.intro {
+  padding: 80px 20px;
+}
+
+.introText {
+  max-width: 800px;
+  margin: auto;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* ================= SERVICES ================= */
+.services {
+  background: #ffffff;
+  padding: 80px 20px 120px;
+}
+
+.services h2 {
+  margin-bottom: 40px;
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
 }
 
 /* GRID */
 .grid {
   display: grid;
+<<<<<<< HEAD
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
@@ -79,10 +173,24 @@
   border: 1px solid #E2E8F0;
   transition: all 0.3s ease;
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+=======
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+.card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
   text-align: center;
 }
 
 .card:hover {
+<<<<<<< HEAD
   transform: translateY(-8px);
   box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
   border-color: #3B82F6;
@@ -202,10 +310,121 @@
   background: #0B1F3A;
   color: white;
   padding: 100px 0;
+=======
+  transform: translateY(-10px);
+  border-color: #3b82f6;
+  box-shadow: 0 20px 60px rgba(37,99,235,0.15);
+}
+
+/* ICON */
+.card svg {
+  font-size: 30px;
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.card p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ================= SECTION ALT ================= */
+.section {
+  padding: 100px 20px;
+}
+
+.sectionAlt {
+  background: #eef2ff;
+  padding: 100px 20px;
+}
+
+/* ================= FEATURES ================= */
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.features div {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.features div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.features svg {
+  font-size: 22px;
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+/* ================= TAGS ================= */
+.centerHeading {
+  margin-bottom: 20px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.tags span {
+  background: #eef2ff;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.tags span:hover {
+  background: #3b82f6;
+  color: white;
+}
+
+/* ================= PROCESS ================= */
+.process {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.process div {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.process div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* ================= CTA ================= */
+.cta {
+  background: #0f172a;
+  color: white;
+  padding: 100px 20px;
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
   text-align: center;
 }
 
 .cta h2 {
+<<<<<<< HEAD
   font-size: 2.75rem;
   margin-bottom: 20px;
   color: white;
@@ -229,15 +448,69 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .processGrid, .industryGrid {
+=======
+  font-size: 32px;
+}
+
+.cta p {
+  margin-top: 10px;
+  color: #cbd5f5;
+}
+
+/* CTA BUTTON */
+.ctaBtn {
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ctaBtn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process {
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+<<<<<<< HEAD
 @media (max-width: 600px) {
   .grid, .processGrid, .industryGrid {
     grid-template-columns: 1fr;
   }
   .section, .sectionAlt {
     padding: 70px 0;
+=======
+@media (max-width: 768px) {
+  .grid,
+  .features,
+  .process {
+    grid-template-columns: 1fr;
+  }
+
+  .heroContent h1 {
+    font-size: 36px;
+  }
+
+  .heroContent p {
+    font-size: 15px;
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
   }
 }

@@ -1,9 +1,14 @@
 :root {
+<<<<<<< HEAD
   color-scheme: light;
+=======
+  color-scheme: dark;
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
 }
 
 * {
   box-sizing: border-box;
+<<<<<<< HEAD
   margin: 0;
   padding: 0;
 }
@@ -21,17 +26,33 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-heading); /* #0F172A */
   font-weight: 700;
   line-height: 1.2;
+=======
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #0f172a;
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
 }
 
 a {
   color: inherit;
   text-decoration: none;
+<<<<<<< HEAD
   transition: var(--transition);
 }
 
 button, input, textarea, select {
   font: inherit;
   outline: none;
+=======
+}
+
+button, input, textarea {
+  font: inherit;
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
 }
 
 img {
@@ -39,6 +60,7 @@ img {
   display: block;
 }
 
+<<<<<<< HEAD
 /* 📐 LAYOUT SYSTEM */
 .container {
   width: 100%;
@@ -73,11 +95,14 @@ section {
   }
 }
 
+=======
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
 .app-shell {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
+<<<<<<< HEAD
 
 main {
   flex: 1;
@@ -174,3 +199,5 @@ main {
 ::-webkit-scrollbar-thumb:hover {
   background: #94A3B8;
 }
+=======
+>>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
