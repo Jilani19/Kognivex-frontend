@@ -1,0 +1,164 @@
+.aboutPage {
+  background: #F7F9FC;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #0B1F3A 0%, #1E3A8A 100%);
+  padding: 140px 0 90px;
+  text-align: center;
+  color: white;
+}
+
+.heroContent {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.heroContent h1 {
+  font-size: clamp(2.5rem, 7vw, 3.8rem);
+  margin-bottom: 24px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.heroContent span {
+  color: #60A5FA;
+}
+
+.heroContent p {
+  color: #E2E8F0;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* SECTIONS */
+.section {
+  padding: 100px 0;
+  background: #FFFFFF;
+}
+
+.sectionAlt {
+  padding: 100px 0;
+  background: #F7F9FC;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.container h2 {
+  font-size: 2.75rem;
+  margin-bottom: 24px;
+  color: #0F172A;
+  font-weight: 800;
+}
+
+.container p {
+  color: #475569;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto 24px;
+}
+
+/* VALUES GRID */
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.valueCard {
+  background: #FFFFFF;
+  padding: 48px 32px;
+  border-radius: 14px;
+  border: 1px solid #E2E8F0;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.valueCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
+  border-color: #3B82F6;
+}
+
+.valueCard h4 {
+  font-size: 1.4rem;
+  color: #0F172A;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  font-weight: 700;
+}
+
+.valueCard svg {
+  font-size: 36px;
+  color: #3B82F6;
+}
+
+.valueCard p {
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* CTA */
+.cta {
+  padding: 100px 24px;
+  text-align: center;
+  background: #0B1F3A;
+  color: white;
+  margin-bottom: 80px; /* ✅ ADDED SPACING FROM FOOTER AS REQUESTED */
+  border-radius: 30px;
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: white;
+  font-weight: 800;
+}
+
+.cta p {
+  color: #E2E8F0;
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .valuesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+  .section, .sectionAlt {
+    padding: 70px 0;
+  }
+  .cta {
+    margin-bottom: 40px;
+    border-radius: 0;
+    padding: 60px 24px;
+  }
+}

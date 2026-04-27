@@ -1,0 +1,191 @@
+.detailsPage {
+  background: #F7F9FC;
+  padding: 40px 0 100px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #64748B;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 40px;
+  transition: all 0.25s ease;
+}
+
+.backBtn:hover {
+  color: #2563EB;
+  transform: translateX(-5px);
+}
+
+/* HEADER */
+.header {
+  margin-bottom: 60px;
+}
+
+.industryBadge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  color: #2563EB;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.header h1 {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  color: #0F172A;
+  margin-bottom: 24px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.description {
+  color: #475569;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  max-width: 850px;
+}
+
+/* IMAGE */
+.mainImageWrapper {
+  margin-bottom: 60px;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
+}
+
+/* CONTENT GRID */
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 60px;
+  margin-bottom: 80px;
+  align-items: start;
+}
+
+.featuresSection h3 {
+  font-size: 1.8rem;
+  margin-bottom: 32px;
+  color: #0F172A;
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 24px;
+}
+
+.featuresList li {
+  display: flex;
+  gap: 16px;
+  color: #475569;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.checkIcon {
+  color: #2563EB;
+  font-size: 1.2rem;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+/* IMPACT CARD */
+.impactCard {
+  background: #FFFFFF;
+  padding: 48px;
+  border-radius: 14px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
+.impactIcon {
+  color: #2563EB;
+  font-size: 2.5rem;
+  margin-bottom: 24px;
+}
+
+.impactCard h3 {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+  color: #0F172A;
+}
+
+.impactCard p {
+  color: #475569;
+  line-height: 1.8;
+}
+
+/* CTA CARD */
+.ctaCard {
+  background: #0B1F3A;
+  padding: 80px 40px;
+  border-radius: 14px;
+  text-align: center;
+  color: white;
+}
+
+.ctaCard h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.ctaCard p {
+  color: #E2E8F0;
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .impactCard {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroImage {
+    min-height: 300px;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .ctaCard {
+    padding: 60px 24px;
+  }
+}

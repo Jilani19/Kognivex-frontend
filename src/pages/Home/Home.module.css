@@ -1,0 +1,189 @@
+/* ================= HERO SECTION ================= */
+.hero {
+  background: linear-gradient(135deg, #0B1F3A 0%, #1E3A8A 100%);
+  color: white;
+  padding: 160px 0 120px;
+  text-align: center;
+  position: relative;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.heroContent {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: #FFFFFF;
+}
+
+.subtitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #60A5FA;
+  margin-bottom: 32px;
+  line-height: 1.1;
+}
+
+.hero p {
+  color: #E2E8F0;
+  font-size: 1.15rem;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.heroBtns {
+  display: flex; gap: 20px; justify-content: center;
+}
+
+/* ================= SECTIONS ================= */
+.section { padding: 100px 0; background: #FFFFFF; }
+.sectionAlt { padding: 100px 0; background: #F7F9FC; }
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sectionHeader h2 {
+  font-size: 2.75rem;
+  color: #0F172A;
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+
+.sectionHeader p {
+  color: #475569;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+/* ================= FLEX LAYOUT ================= */
+.flexLayout {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; text-align: left;
+}
+
+.leftContent h2 { font-size: 2.5rem; margin-bottom: 24px; color: #0F172A; }
+.leftContent p { font-size: 1.1rem; color: #475569; margin-bottom: 24px; }
+
+.blueCard {
+  background: #3B82F6; padding: 48px; border-radius: 16px; color: white;
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+}
+
+.blueCard h3 { font-size: 1.5rem; margin-bottom: 24px; color: white; }
+.blueCard ul { list-style: none; padding: 0; }
+.blueCard li { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-size: 1.1rem; font-weight: 600; }
+
+/* ================= GRID 4 COLUMNS ================= */
+.grid4 {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+}
+
+.card {
+  background: #FFFFFF; padding: 40px 32px; border-radius: 12px; border: 1px solid #E2E8F0;
+  text-align: center; transition: all 0.3s ease; height: 100%;
+}
+
+.card:hover { transform: translateY(-8px); border-color: #3B82F6; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05); }
+.cardIcon { font-size: 40px; color: #3B82F6; margin-bottom: 24px; }
+.card h3 { font-size: 1.35rem; margin-bottom: 16px; color: #0F172A; font-weight: 700; }
+.card p { color: #475569; font-size: 0.95rem; line-height: 1.6; }
+
+/* ================= STATS SECTION ================= */
+.statsGrid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; text-align: center;
+}
+
+.statItem h3 {
+  font-size: 3.5rem; color: #2563EB; font-weight: 800; margin-bottom: 8px;
+}
+
+.statItem p {
+  color: #475569; font-size: 1.1rem; font-weight: 600;
+}
+
+/* ================= TESTIMONIAL SLIDER ================= */
+.testimonialSlider {
+  position: relative; max-width: 900px; margin: 0 auto; overflow: hidden; padding: 20px 0;
+}
+
+.sliderTrack {
+  display: flex; transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide {
+  min-width: 100%; padding: 0 10px;
+}
+
+.testimonialCard {
+  background: #FFFFFF; padding: 60px; border-radius: 20px; text-align: center;
+  border: 1px solid #E2E8F0; box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.quoteIcon {
+  font-size: 40px; color: #DBEAFE; position: absolute; top: 30px; left: 30px;
+}
+
+.testimonialText {
+  font-size: 1.4rem; color: #1E293B; font-style: italic; line-height: 1.8; margin-bottom: 32px;
+}
+
+.testimonialRating {
+  color: #FBBF24; display: flex; justify-content: center; gap: 5px; margin-bottom: 24px;
+}
+
+.testimonialAuthor h4 {
+  font-size: 1.25rem; color: #0F172A; margin-bottom: 4px; font-weight: 700;
+}
+
+.testimonialAuthor p {
+  color: #64748B; font-weight: 500;
+}
+
+.sliderDots {
+  display: flex; justify-content: center; gap: 12px; margin-top: 40px;
+}
+
+.dot {
+  width: 12px; height: 12px; border-radius: 50%; background: #E2E8F0; cursor: pointer; transition: 0.3s;
+}
+
+.dot:hover { background: #CBD5E1; }
+.activeDot { background: #3B82F6; width: 30px; border-radius: 10px; }
+
+/* ================= CTA ================= */
+.cta {
+  background: #0B1F3A; color: white; padding: 100px 0; text-align: center;
+}
+
+.cta h2 { font-size: 2.75rem; margin-bottom: 20px; color: white; }
+.cta p { color: #E2E8F0; font-size: 1.25rem; margin-bottom: 40px; }
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .grid4, .statsGrid { grid-template-columns: repeat(2, 1fr); }
+  .flexLayout { grid-template-columns: 1fr; text-align: center; }
+  .statItem h3 { font-size: 2.5rem; }
+}
+
+@media (max-width: 600px) {
+  .grid4, .statsGrid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 2rem; }
+  .subtitle { font-size: 2.5rem; }
+  .testimonialCard { padding: 40px 20px; }
+  .testimonialText { font-size: 1.1rem; }
+}

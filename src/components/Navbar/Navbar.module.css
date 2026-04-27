@@ -1,0 +1,158 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(11, 31, 58, 0.95); /* Deep Navy semi-transparent by default */
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  padding: 16px 0;
+}
+
+/* When scrolled, we can either keep it dark or switch to light. 
+   The user said "Use dark or semi-transparent background (matching hero theme)".
+   So I'll keep it dark but maybe more solid or slightly different. */
+.scrolled {
+  background: #0B1F3A;
+  padding: 12px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-bottom-color: transparent;
+}
+
+.container {
+  max-width: 1320px;
+  margin: auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  text-decoration: none;
+  letter-spacing: -1px;
+  transition: var(--transition);
+}
+
+.logo a:hover {
+  color: var(--primary-highlight);
+}
+
+/* NAV LINKS */
+.navLinks {
+  display: flex;
+  gap: 32px;
+}
+
+.navLinks a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: var(--transition);
+  position: relative;
+}
+
+.navLinks a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-highlight);
+  transition: var(--transition);
+}
+
+.navLinks a:hover {
+  color: #FFFFFF;
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+/* ACTIVE LINK */
+.active {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+}
+
+.active::after {
+  width: 100% !important;
+}
+
+/* CTA BUTTON */
+.cta {
+  padding: 10px 24px;
+  background: linear-gradient(135deg, var(--primary-accent), var(--primary-highlight));
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.4);
+  filter: brightness(1.1);
+}
+
+/* RIGHT SIDE */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* MOBILE */
+.menuToggle {
+  display: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .navLinks {
+    display: none;
+  }
+
+  .navLinks.open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0B1F3A;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 24px;
+    gap: 32px;
+    z-index: 999;
+    align-items: center;
+    text-align: center;
+  }
+
+  .navLinks.open a {
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  .menuToggle {
+    display: block;
+    position: relative;
+    z-index: 1001;
+  }
+
+  .cta {
+    display: none;
+  }
+}
