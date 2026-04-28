@@ -1,24 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import BlogCard from './BlogCard';
-import BlogSidebar from './BlogSidebar';
 import styles from './BlogPage.module.css';
 import api from '../../services/api';
-<<<<<<< HEAD
 import { blogData } from '../../constants/blogData';
 import { updateSeo } from '../../utils/seoHelper';
 
 function BlogPage() {
-  const [blogs, setBlogs] = useState(blogData); // Default to local high-quality data
-=======
+  const [blogs, setBlogs] = useState(blogData);
+  const [category, setCategory] = useState('All');
+  const [currentPage, setCurrentPage] = useState(1);
+  const blogsPerPage = 12;
 
-function BlogPage() {
-  const [blogs, setBlogs] = useState([]);
->>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
-  const [search, setSearch] = useState('');
-  const [category, setCategory] = useState('');
+  const categories = ["All", "Technology", "Education", "Business", "Startup", "AI / SaaS"];
 
   useEffect(() => {
-<<<<<<< HEAD
     updateSeo({
       title: 'Blog | Engineering Insights by Kognivex',
       description: 'Explore our latest thoughts on SaaS architecture, digital transformation, and elite software engineering.',
@@ -32,27 +27,29 @@ function BlogPage() {
         }
       } catch (err) {
         console.warn('API not available, using local blog data.');
-=======
-    const fetchBlogs = async () => {
-      try {
-        const res = await api.get('/blogs');
-        setBlogs(res.data);
-      } catch (err) {
-        console.error(err.message);
->>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
       }
     };
 
     fetchBlogs();
   }, []);
 
+  // Filter logic
   const filtered = blogs.filter(blog =>
-    blog.title?.toLowerCase().includes(search.toLowerCase()) &&
-    (category ? blog.category === category : true)
+    category === 'All' ? true : blog.category === category
   );
 
+  // Pagination logic
+  const indexOfLastBlog = currentPage * blogsPerPage;
+  const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
+  const currentBlogs = filtered.slice(indexOfFirstBlog, indexOfLastBlog);
+  const totalPages = Math.ceil(filtered.length / blogsPerPage);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    window.scrollTo(0, 0);
+  };
+
   return (
-<<<<<<< HEAD
     <main className={styles.blogPage}>
       {/* HERO SECTION */}
       <section className={styles.hero}>
@@ -66,10 +63,27 @@ function BlogPage() {
       </section>
 
       <div className={styles.container}>
-        <div className={styles.blogGrid}>
-          {filtered.length > 0 ? (
-            filtered.map(blog => (
-              <BlogCard key={blog._id} blog={blog} />
+        {/* CATEGORY FILTERS */}
+        <div className={styles.categoryFilters}>
+          {categories.map(cat => (
+            <button
+              key={cat}
+              onClick={() => {
+                setCategory(cat);
+                setCurrentPage(1); // Reset to page 1 on category change
+              }}
+              className={`${styles.categoryBtn} ${category === cat ? styles.activeCategoryBtn : ''}`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        {/* BLOG GRID */}
+        <div className={styles.blogContainer}>
+          {currentBlogs.length > 0 ? (
+            currentBlogs.map(blog => (
+              <BlogCard key={blog.id} blog={blog} />
             ))
           ) : (
             <div style={{ textAlign: 'center', gridColumn: '1 / -1', padding: '50px' }}>
@@ -78,28 +92,38 @@ function BlogPage() {
           )}
         </div>
 
-        <BlogSidebar 
-          setSearch={setSearch}
-          setCategory={setCategory}
-        />
+        {/* PAGINATION */}
+        {totalPages > 1 && (
+          <div className={styles.pagination}>
+            <button 
+              onClick={() => handlePageChange(currentPage - 1)} 
+              disabled={currentPage === 1}
+              className={styles.pageBtn}
+            >
+              Previous
+            </button>
+            
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+              <button
+                key={page}
+                onClick={() => handlePageChange(page)}
+                className={`${styles.pageBtn} ${currentPage === page ? styles.activePageBtn : ''}`}
+              >
+                {page}
+              </button>
+            ))}
+
+            <button 
+              onClick={() => handlePageChange(currentPage + 1)} 
+              disabled={currentPage === totalPages}
+              className={styles.pageBtn}
+            >
+              Next
+            </button>
+          </div>
+        )}
       </div>
     </main>
-=======
-    <div className={styles.container}>
-
-      <div className={styles.blogGrid}>
-        {filtered.map(blog => (
-          <BlogCard key={blog._id} blog={blog} />
-        ))}
-      </div>
-
-      <BlogSidebar 
-        setSearch={setSearch}
-        setCategory={setCategory}
-      />
-
-    </div>
->>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
   );
 }
 

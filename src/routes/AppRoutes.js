@@ -23,11 +23,8 @@
   import Careers from '../pages/Careers/Careers';
   import Contact from '../pages/Contact/Contact';
   import GetQuote from '../pages/Contact/GetQuote';
-<<<<<<< HEAD
   import PrivacyPolicy from '../pages/PrivacyPolicy/PrivacyPolicy';
   import TermsAndConditions from '../pages/TermsAndConditions/TermsAndConditions';
-=======
->>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
   import AdminLogin from '../pages/Auth/AdminLogin';
   import Dashboard from '../pages/Admin/Dashboard';
   import ManageBlogs from '../pages/Admin/ManageBlogs';
@@ -56,21 +53,19 @@
           <Route path="services/cloud-devops" element={<CloudDevOps />} />
 
           {/* ✅ BLOG SYSTEM (CLEAN) */}
-          <Route path="blog/:slug" element={<BlogDetails />} /> 
+          <Route path="blogs/:id" element={<BlogDetails />} /> 
           <Route path="blog" element={<BlogPage />} />
+          <Route path="blogs" element={<BlogPage />} /> {/* Added /blogs just in case */}
          
           
           <Route path="projects" element={<Projects />} />
-          <Route path="projects/:slug" element={<ProjectDetails />} />
+          <Route path="projects/:id" element={<ProjectDetails />} />
           <Route path="testimonials" element={<Testimonials />} />
           <Route path="careers" element={<Careers />} />
           <Route path="contact" element={<Contact />} />
           <Route path="get-quote" element={<GetQuote />} />
-<<<<<<< HEAD
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="terms-and-conditions" element={<TermsAndConditions />} />
-=======
->>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
         </Route>
 
         {/* ADMIN */}

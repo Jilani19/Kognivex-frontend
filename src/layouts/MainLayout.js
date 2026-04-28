@@ -9,11 +9,7 @@ function MainLayout() {
     <div className="app-shell">
       <Navbar />
       <ErrorBoundary>
-<<<<<<< HEAD
         <main>
-=======
-        <main style={{ flex: 1, padding: '2rem' }}>
->>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
           <Outlet />
         </main>
       </ErrorBoundary>

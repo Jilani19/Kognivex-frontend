@@ -1,5 +1,4 @@
 .card {
-<<<<<<< HEAD
   background: #FFFFFF;
   border-radius: 12px;
   border: 1px solid #E2E8F0;
@@ -110,49 +109,4 @@
 
 .card:hover .cta {
   gap: 12px;
-=======
-  background: #fff;
-  border-radius: 16px;
-  padding: 1.5rem;
-  border: 1px solid #e5e7eb;
-  transition: all 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-}
-
-.meta {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.8rem;
-  color: #6b7280;
-}
-
-.title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin: 0.5rem 0;
-}
-
-.excerpt {
-  color: #4b5563;
-  font-size: 0.95rem;
-}
-
-.cta {
-  margin-top: 1rem;
-  display: inline-block;
-  color: #2563eb;
-  font-weight: 500;
-}
-
-.image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 1rem;
->>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
 }

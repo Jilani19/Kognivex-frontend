@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { updateSeo } from '../../utils/seoHelper';
@@ -44,7 +43,11 @@ function Projects() {
                 onClick={() => navigate(`/projects/${project.id}`)}
               >
                 <div className={styles.imageWrapper}>
-                  <img src={project.image} alt={project.title} />
+                  <img 
+                    src={project.image || "/images/default.jpg"} 
+                    alt={project.title} 
+                    onError={(e) => { e.target.src = '/images/default.jpg' }}
+                  />
                   <div className={styles.categoryTag}>
                     <FaTag /> {project.industry}
                   </div>
@@ -69,7 +72,7 @@ function Projects() {
         <div className={styles.container}>
           <h2>Have a Project in Mind?</h2>
           <p>Let's discuss how we can build a scalable solution for your business.</p>
-          <button onClick={() => navigate('/contact')} className="btn-primary">Start Your Project</button>
+          <button onClick={() => navigate('/contact')} className="ctaButton">Start Your Project</button>
         </div>
       </section>
     </main>
@@ -77,84 +80,3 @@ function Projects() {
 }
 
 export default Projects;
-=======
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import projectService from '../../services/projectService';
-
-function ProjectDetails() {
-  const { slug } = useParams();
-  const [project, setProject] = useState(null);
-  const [error, setError] = useState('');
-
-  useEffect(() => {
-    const loadProject = async () => {
-      try {
-        const data = await projectService.fetchProjectBySlug(slug); // ✅ FIXED
-        setProject(data);
-      } catch (err) {
-        setError('Project not available yet.');
-      }
-    };
-    loadProject();
-  }, [slug]);
-
-  if (error) {
-    return (
-      <section style={{ padding: '3rem', textAlign: 'center' }}>
-        <h1>🚧 {error}</h1>
-        <p style={{ marginTop: '10px', color: '#64748b' }}>
-          This project will be published soon.
-        </p>
-      </section>
-    );
-  }
-
-  if (!project) {
-    return (
-      <section style={{ padding: '3rem', textAlign: 'center' }}>
-        <p>Loading project…</p>
-      </section>
-    );
-  }
-
-  return (
-    <article
-      style={{
-        padding: '2rem',
-        background: '#fff',
-        borderRadius: '12px',
-        maxWidth: '900px',
-        margin: 'auto'
-      }}
-    >
-      <h1>{project.title}</h1>
-
-      <p style={{ marginTop: '10px', color: '#64748b' }}>
-        {project.description}
-      </p>
-
-      <p style={{ marginTop: '20px' }}>
-        <strong>Technologies:</strong>{' '}
-        {project.technologies?.join(', ') || 'Not specified'}
-      </p>
-
-      <div style={{ display: 'grid', gap: '1rem', marginTop: '20px' }}>
-        {project.images?.map((img) => (
-          <img
-            key={img}
-            src={img}
-            alt={project.title}
-            style={{
-              width: '100%',
-              borderRadius: '10px'
-            }}
-          />
-        ))}
-      </div>
-    </article>
-  );
-}
-
-export default ProjectDetails;
->>>>>>> b121ab91344270084ca30bf012f1c08b11ca5569
