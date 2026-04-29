@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: kognivex
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: node server.js
