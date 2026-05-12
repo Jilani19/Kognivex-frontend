@@ -9,7 +9,6 @@
     "framer-motion": "^12.38.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-<<<<<<< HEAD
     "react-helmet-async": "^3.0.0",
     "react-icons": "^5.6.0",
     "react-router-dom": "^6.14.2",
@@ -17,14 +16,6 @@
     "react-slick": "^0.31.0",
     "slick-carousel": "^1.8.1",
     "yup": "^1.7.1"
-=======
-    "react-icons": "^5.6.0",
-    "react-router-dom": "^6.14.2",
-    "react-slick": "^0.31.0",
-    "slick-carousel": "^1.8.1",
-    "yup": "^1.7.1",
-    "react-scripts": "^5.0.1"
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
   },
   "scripts": {
     "start": "react-scripts start",
