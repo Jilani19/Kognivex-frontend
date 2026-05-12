@@ -1,19 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import styles from "./Navbar.module.css";
-<<<<<<< HEAD
 import { FaBars, FaTimes, FaPalette } from 'react-icons/fa';
-=======
-import { FaBars, FaTimes } from 'react-icons/fa';
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-<<<<<<< HEAD
   const [isAnimating, setIsAnimating] = useState(false);
-=======
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -29,8 +22,6 @@ function Navbar() {
   useEffect(() => {
     setMenuOpen(false);
   }, [location]);
-<<<<<<< HEAD
-  
   // Theme Color Logic
   const [accentIndex, setAccentIndex] = useState(() => {
     return parseInt(localStorage.getItem('kognivex-accent') || '0');
@@ -134,8 +125,6 @@ function Navbar() {
     setAccentIndex((prev) => (prev + 1) % accents.length);
     setTimeout(() => setIsAnimating(false), 500);
   };
-=======
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
 
   const isActive = (path) =>
     location.pathname === path ? styles.active : "";
@@ -162,7 +151,6 @@ function Navbar() {
         {/* RIGHT SIDE */}
         <div className={styles.right}>
           <button 
-<<<<<<< HEAD
             className={`${styles.colorToggle} ${isAnimating ? styles.wiggle : ""}`} 
             onClick={toggleAccent}
             title="Change Accent Color"
@@ -177,8 +165,7 @@ function Navbar() {
             <FaPalette className={styles.paletteIcon} />
           </button>
           <button 
-=======
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
+
             className={styles.cta}
             onClick={() => navigate("/get-quote")}
           >

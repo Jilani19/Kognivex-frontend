@@ -18,13 +18,8 @@ export const AuthProvider = ({ children }) => {
     }
   }, [user]);
 
-<<<<<<< HEAD
   const login = async (username, password) => {
     const response = await authService.login({ username, password });
-=======
-  const login = async (email, password) => {
-    const response = await authService.login({ email, password });
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
     setUser(response.user);
     return response;
   };

@@ -9,7 +9,6 @@
   import MobileApps from '../pages/Services/MobileApps';
   import UIUX from '../pages/Services/UIUX';
   import CloudDevOps from '../pages/Services/CloudDevOps';
-<<<<<<< HEAD
   import CRMSolutions from '../pages/Services/CRMSolutions';
   import SchoolSystems from '../pages/Services/SchoolSystems';
   import APIIntegration from '../pages/Services/APIIntegration';
@@ -18,8 +17,6 @@
   import Maintenance from '../pages/Services/Maintenance';
   import WordPressDev from '../pages/Services/WordPressDev';
   import ScrollToTop from '../components/Common/ScrollToTop';
-=======
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
 
   // ❌ REMOVE this (old blog page)
   // import BlogList from '../pages/Blog/BlogList';
@@ -44,12 +41,9 @@
   import CreateProject from '../pages/Admin/CreateProject';
   import ManageProjects from '../pages/Admin/ManageProjects';
   import EditProject from '../pages/Admin/EditProject';
-<<<<<<< HEAD
   import ManageJobs from '../pages/Admin/ManageJobs';
   import CreateJob from '../pages/Admin/CreateJob';
   import EditJob from '../pages/Admin/EditJob';
-=======
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
   import UploadMedia from '../pages/Admin/UploadMedia';
   import NotFound from '../components/Common/NotFound';
   import ProtectedRoute from './ProtectedRoute';
@@ -57,13 +51,9 @@
 
   function AppRoutes() {
     return (
-<<<<<<< HEAD
       <>
         <ScrollToTop />
         <Routes>
-=======
-      <Routes>
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
 
         {/* MAIN LAYOUT */}
         <Route path="/" element={<MainLayout />}>
@@ -74,7 +64,6 @@
           <Route path="services/mobile-apps" element={<MobileApps />} />
           <Route path="services/ui-ux" element={<UIUX />} />
           <Route path="services/cloud-devops" element={<CloudDevOps />} />
-<<<<<<< HEAD
           <Route path="services/crm-solutions" element={<CRMSolutions />} />
           <Route path="services/school-systems" element={<SchoolSystems />} />
           <Route path="services/api-integration" element={<APIIntegration />} />
@@ -85,11 +74,8 @@
 
           {/* ✅ BLOG SYSTEM (CLEAN) */}
           <Route path="blog/:slug" element={<BlogDetails />} /> 
-=======
-
-          {/* ✅ BLOG SYSTEM (CLEAN) */}
           <Route path="blogs/:id" element={<BlogDetails />} /> 
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
+
           <Route path="blog" element={<BlogPage />} />
           <Route path="blogs" element={<BlogPage />} /> {/* Added /blogs just in case */}
          
@@ -121,20 +107,15 @@
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="manage-blogs" element={<ManageBlogs />} />
           <Route path="create-blog" element={<CreateBlog />} />
-<<<<<<< HEAD
           <Route path="edit-blog/:id" element={<EditBlog />} />
           <Route path="manage-projects" element={<ManageProjects />} />
           <Route path="create-project" element={<CreateProject />} />
           <Route path="edit-project/:id" element={<EditProject />} />
+          <Route path="edit-blog/:slug" element={<EditBlog />} />
+          <Route path="edit-project/:slug" element={<EditProject />} />
           <Route path="manage-jobs" element={<ManageJobs />} />
           <Route path="create-job" element={<CreateJob />} />
           <Route path="edit-job/:id" element={<EditJob />} />
-=======
-          <Route path="edit-blog/:slug" element={<EditBlog />} />
-          <Route path="manage-projects" element={<ManageProjects />} />
-          <Route path="create-project" element={<CreateProject />} />
-          <Route path="edit-project/:slug" element={<EditProject />} />
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
           <Route path="upload-media" element={<UploadMedia />} />
         </Route>
 
@@ -142,10 +123,7 @@
         <Route path="*" element={<NotFound />} />
 
       </Routes>
-<<<<<<< HEAD
     </>
-=======
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
     );
   }
 

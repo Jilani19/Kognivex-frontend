@@ -1,5 +1,4 @@
 .card {
-<<<<<<< HEAD
   border-radius: 30px;
   position: relative;
   overflow: hidden;
@@ -12,17 +11,16 @@
   height: 100%;
 }
 
+.card:hover {
+  transform: translateY(-8px);
+}
+
 .neonBg {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(
-    circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(var(--primary-rgb), 0.15) 0%,
-    transparent 80%
-  );
+  inset: 0;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(var(--primary-rgb), 0.15) 0%,
+      transparent 80%);
   opacity: 0;
   transition: opacity 0.5s ease;
   pointer-events: none;
@@ -44,23 +42,6 @@
   z-index: 2;
   transition: all 0.5s ease;
   overflow: hidden;
-=======
-  background: #FFFFFF;
-  border-radius: 12px;
-  border: 1px solid #E2E8F0;
-  overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-  flex-direction: column;
-  height: 100%; /* Ensures equal height in grid */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.1);
-  border-color: #3B82F6;
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
 }
 
 .imageWrapper {
@@ -74,27 +55,19 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-<<<<<<< HEAD
   transition: transform 0.8s ease;
 }
 
-.card:hover img {
-=======
-  transition: transform 0.5s ease;
-}
-
 .card:hover .imageWrapper img {
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
   transform: scale(1.1);
 }
 
 .categoryBadge {
   position: absolute;
-<<<<<<< HEAD
   top: 15px;
   right: 15px;
   background: var(--primary-highlight);
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 6px 14px;
   border-radius: 8px;
   font-size: 0.7rem;
@@ -109,25 +82,6 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-=======
-  top: 16px;
-  right: 16px;
-  background: #3B82F6;
-  color: white;
-  padding: 6px 14px;
-  border-radius: 6px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  z-index: 2;
-  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
-}
-
-.content {
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
 }
 
 .meta {
@@ -138,7 +92,6 @@
 }
 
 .meta span {
-<<<<<<< HEAD
   font-size: 0.8rem;
   color: var(--primary-highlight);
   font-weight: 700;
@@ -155,28 +108,7 @@
   color: var(--text-heading);
   margin-bottom: 12px;
   line-height: 1.3;
-}
 
-.card p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: var(--text-body);
-  margin-bottom: 20px;
-=======
-  font-size: 0.85rem;
-  color: #64748B;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.card h3 {
-  font-size: 1.25rem;
-  color: #0F172A;
-  margin-bottom: 12px;
-  line-height: 1.4;
-  font-weight: 700;
-  /* Truncate long titles to 2 lines */
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -184,12 +116,11 @@
 }
 
 .card p {
-  color: #475569;
   font-size: 0.95rem;
   line-height: 1.6;
-  margin-bottom: 24px;
-  /* Truncate description to 3 lines */
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
+  color: var(--text-body);
+  margin-bottom: 20px;
+
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -197,9 +128,7 @@
 }
 
 .cta {
-<<<<<<< HEAD
   background: rgba(var(--primary-rgb), 0.05);
-  border: none;
   border-top: 1px solid var(--border-color);
   color: var(--primary-highlight);
   padding: 18px;
@@ -218,20 +147,24 @@
 
 .card:hover .cta {
   background: var(--primary-highlight);
-  color: #FFFFFF;
-=======
-  margin-top: auto;
-  color: #3B82F6;
-  font-weight: 700;
-  font-size: 0.9rem;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  transition: gap 0.2s;
+  color: #ffffff;
+  gap: 14px;
 }
 
-.card:hover .cta {
-  gap: 12px;
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
+@media (max-width: 768px) {
+  .content {
+    padding: 20px 20px 0;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  .cta {
+    padding: 16px;
+  }
 }

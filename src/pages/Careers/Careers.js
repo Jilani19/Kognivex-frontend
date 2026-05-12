@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import jobService from '../../services/jobService';
@@ -29,7 +28,6 @@ function Careers() {
   };
 
   useEffect(() => {
-
     const fetchJobs = async () => {
       try {
         const data = await jobService.fetchAllJobs();
@@ -68,23 +66,10 @@ function Careers() {
     };
 
     fetchJobs();
-=======
-import React, { useEffect } from 'react';
-import { updateSeo } from '../../utils/seoHelper';
-import styles from './Careers.module.css';
-
-function Careers() {
-  useEffect(() => {
-    updateSeo({
-      title: 'Careers | Kognivex',
-      description: 'Join the Kognivex team. We are always looking for talented engineers and designers to help us build the future of software.',
-    });
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
   }, []);
 
   return (
     <main className={styles.careersPage}>
-<<<<<<< HEAD
       <SEO 
         title="Careers"
         description="Build the future of SaaS and Web 3.0. Join Kognivex and work on cutting-edge software solutions that impact businesses globally."
@@ -208,14 +193,6 @@ function Careers() {
         </div>
       </section>
 
-=======
-      <div className={styles.container}>
-        <div className={styles.content}>
-          <h1>Careers Page – Coming Soon</h1>
-          <p>We're currently scaling our engineering team. Check back soon for open positions!</p>
-        </div>
-      </div>
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
     </main>
   );
 }

@@ -11,11 +11,7 @@ export const projectsData = [
       "Interactive Plant Care Guides",
       "Regional Delivery Tracking"
     ],
-<<<<<<< HEAD
     image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=800",
-=======
-    image: "https://images.unsplash.com/photo-1466781783364-391eaf19df4c?auto=format&fit=crop&q=80&w=800",
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
     slug: "greenleaf-nursery"
   },
   {
@@ -60,11 +56,7 @@ export const projectsData = [
       "Secure Digital Assessments",
       "Multi-device Course Access"
     ],
-<<<<<<< HEAD
     image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=800",
-=======
-    image: "https://images.unsplash.com/photo-1523050335392-9beffa5d2293?auto=format&fit=crop&q=80&w=800",
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
     slug: "edustream-academy"
   },
   {

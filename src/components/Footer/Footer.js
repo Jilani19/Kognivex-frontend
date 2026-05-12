@@ -54,15 +54,9 @@ function Footer() {
         <div className={styles.bottomBar}>
           <p>© 2026 Kognivex IT Solutions. All rights reserved.</p>
           <div className={styles.socials}>
-<<<<<<< HEAD
             <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="LinkedIn"><FaLinkedin /></a>
             <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Twitter"><FaTwitter /></a>
             <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="GitHub"><FaGithub /></a>
-=======
-            <a href="#" className={styles.socialIcon}><FaLinkedin /></a>
-            <a href="#" className={styles.socialIcon}><FaTwitter /></a>
-            <a href="#" className={styles.socialIcon}><FaGithub /></a>
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
           </div>
         </div>
       </div>

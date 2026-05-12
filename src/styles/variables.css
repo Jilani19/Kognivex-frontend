@@ -30,7 +30,6 @@
   /* TRANSITIONS */
   --transition: all 0.25s ease;
 
-<<<<<<< HEAD
   /* ADMIN THEME (Indigo/Blue) */
   --admin-primary: #6366f1;
   --admin-primary-light: #818cf8;
@@ -40,8 +39,6 @@
   --admin-bg-sidebar: #0a0b10;
   --admin-bg-main: #050608;
 
-=======
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
   /* LEGACY FALLBACKS (Mapping new to old names for safety) */
   --primary: var(--primary-accent);
   --primary-light: var(--primary-highlight);

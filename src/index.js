@@ -6,7 +6,6 @@ import { AuthProvider } from './context/AuthContext';
 import { BlogProvider } from './context/BlogContext';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-<<<<<<< HEAD
 import './styles/variables.css';
 import './styles/global.css';
 
@@ -24,19 +23,5 @@ root.render(
         </AuthProvider>
       </BrowserRouter>
     </HelmetProvider>
-=======
-import './styles/global.css';
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <AuthProvider>
-        <BlogProvider>
-          <App />
-        </BlogProvider>
-      </AuthProvider>
-    </BrowserRouter>
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
   </React.StrictMode>
 );

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-<<<<<<< HEAD
 import styles from './Home.module.css';
 import { 
   FaCode, FaMobileAlt, FaCloud, FaCogs, FaWordpress,
@@ -9,15 +8,6 @@ import {
 } from 'react-icons/fa';
 import Counter from '../../components/Common/Counter';
 import SEO from '../../components/SEO/SEO';
-=======
-import { updateSeo } from '../../utils/seoHelper';
-import styles from './Home.module.css';
-import { 
-  FaCode, FaMobileAlt, FaCloud, FaCogs, 
-  FaRocket, FaShieldAlt, FaChartLine, FaUsers, 
-  FaCheck, FaQuoteLeft 
-} from 'react-icons/fa';
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
 
 const testimonials = [
   {
@@ -51,7 +41,6 @@ function Home() {
   const navigate = useNavigate();
   const [activeSlide, setActiveSlide] = useState(0);
 
-<<<<<<< HEAD
   return (
     <main>
       <SEO 
@@ -59,49 +48,21 @@ function Home() {
         description="Build Scalable Software That Grows Your Business. Kognivex is a leading web development and SaaS solutions company helping startups and businesses."
         keywords="web development, SaaS solutions, software company, IT services India, scalable software"
       />
-=======
-  useEffect(() => {
-    updateSeo({
-      title: 'Kognivex | Web Development & SaaS Solutions Company',
-      description: 'Build Scalable Software That Grows Your Business. Kognivex is a leading web development and SaaS solutions company helping startups and businesses.',
-    });
-
-    const interval = setInterval(() => {
-      setActiveSlide(prev => (prev + 1) % testimonials.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <main>
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
       {/* HERO SECTION */}
       <section className={styles.hero}>
         <div className={styles.container}>
           <div className={styles.heroContent}>
-<<<<<<< HEAD
             <h1>Web Development & SaaS Solutions <span className={styles.highlight}>Company</span></h1>
-=======
-            <h1>Web Development & SaaS Solutions Company</h1>
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
             <h2 className={styles.subtitle}>Build Scalable Software That Grows Your Business</h2>
             <p>
               Kognivex is a leading web development and SaaS solutions company helping 
               startups and businesses build scalable, high-performance applications.
             </p>
             <div className={styles.heroBtns}>
-<<<<<<< HEAD
               <button onClick={() => navigate('/get-quote')} className={styles.primaryBtn}>
                 Start Your Project <FaRocket style={{ marginLeft: '10px' }} />
               </button>
               <button onClick={() => navigate('/services')} className={styles.secondaryBtn}>
-=======
-              <button onClick={() => navigate('/get-quote')} className="btn-primary">
-                Start Project
-              </button>
-              <button onClick={() => navigate('/services')} className="btn-outline-white">
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
                 Explore Services
               </button>
             </div>
@@ -109,7 +70,6 @@ function Home() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* TOP WEB DEVELOPMENT COMPANY (SHOWCASE) */}
       <section className={styles.showcaseSection}>
         <div className={styles.container}>
@@ -167,32 +127,6 @@ function Home() {
                 <div className={styles.statIcon}><FaAward /></div>
                 <h3><Counter end={100} suffix="%" /></h3>
                 <p>Success Rate</p>
-=======
-      {/* TOP WEB DEVELOPMENT COMPANY (LEFT + RIGHT) */}
-      <section className={styles.section}>
-        <div className={styles.container}>
-          <div className={styles.flexLayout}>
-            <div className={styles.leftContent}>
-              <h2>Top Web Development Company for Scalable Solutions</h2>
-              <p>
-                Kognivex provides end-to-end software development services including web development, 
-                SaaS platforms, mobile app development, and enterprise systems.
-              </p>
-              <p>
-                We help startups and businesses build scalable digital products using modern technologies, 
-                ensuring performance, security, and long-term growth.
-              </p>
-            </div>
-            <div className={styles.rightCard}>
-              <div className={styles.blueCard}>
-                <h3>Why Businesses Choose Us</h3>
-                <ul>
-                  <li><FaCheck /> Scalable architecture</li>
-                  <li><FaCheck /> High-performance systems</li>
-                  <li><FaCheck /> Secure development</li>
-                  <li><FaCheck /> Modern tech stack</li>
-                </ul>
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
               </div>
             </div>
           </div>
@@ -200,7 +134,6 @@ function Home() {
       </section>
 
       {/* OUR CORE SERVICES (4 COLUMNS) */}
-<<<<<<< HEAD
       <section className={styles.servicesSection}>
         <div className={styles.container}>
           <div className={styles.servicesSectionHeader}>
@@ -252,40 +185,9 @@ function Home() {
             <button onClick={() => navigate('/services')} className={styles.viewMoreBtn}>
               View More Services
             </button>
-=======
-      <section className={styles.sectionAlt}>
-        <div className={styles.container}>
-          <div className={styles.sectionHeader}>
-            <h2>Our Core Services</h2>
-            <p>We deliver scalable and high-performance solutions tailored for modern businesses.</p>
-          </div>
-          <div className={styles.grid4}>
-            <div className={styles.card}>
-              <FaCode className={styles.cardIcon} />
-              <h3>Web Development</h3>
-              <p>Custom web development services using modern technologies like React, Node.js, and scalable cloud architecture.</p>
-            </div>
-            <div className={styles.card}>
-              <FaMobileAlt className={styles.cardIcon} />
-              <h3>Mobile Apps</h3>
-              <p>High performance Android and iOS mobile applications with seamless user experience.</p>
-            </div>
-            <div className={styles.card}>
-              <FaCloud className={styles.cardIcon} />
-              <h3>SaaS Platforms</h3>
-              <p>Scalable SaaS platform development with secure cloud-based infrastructure.</p>
-            </div>
-            <div className={styles.card}>
-              <FaCogs className={styles.cardIcon} />
-              <h3>Enterprise Systems</h3>
-              <p>Enterprise software solutions to automate workflows and business operations.</p>
-            </div>
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
           </div>
         </div>
       </section>
-
-<<<<<<< HEAD
 
 
       {/* WHY CHOOSE US GRID */}
@@ -342,67 +244,11 @@ function Home() {
                 <h3>Cloud Native</h3>
                 <p>Fully integrated cloud solutions ensuring 99.9% uptime and global accessibility.</p>
               </div>
-=======
-      {/* TRUSTED BY BUSINESSES (STATS) */}
-      <section className={styles.section}>
-        <div className={styles.container}>
-          <div className={styles.sectionHeader}>
-            <h2>Trusted by Businesses</h2>
-          </div>
-          <div className={styles.statsGrid}>
-            <div className={styles.statItem}>
-              <h3>50+</h3>
-              <p>Projects Delivered</p>
-            </div>
-            <div className={styles.statItem}>
-              <h3>30+</h3>
-              <p>Happy Clients</p>
-            </div>
-            <div className={styles.statItem}>
-              <h3>5+</h3>
-              <p>Years Experience</p>
-            </div>
-            <div className={styles.statItem}>
-              <h3>10+</h3>
-              <p>Technologies Used</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* WHY CHOOSE US GRID */}
-      <section className={styles.sectionAlt}>
-        <div className={styles.container}>
-          <div className={styles.sectionHeader}>
-            <h2>Why Choose Us</h2>
-          </div>
-          <div className={styles.grid4}>
-            <div className={styles.card}>
-              <FaRocket className={styles.cardIcon} />
-              <h3>Performance First</h3>
-              <p>Fast, optimized, and scalable web applications built for performance.</p>
-            </div>
-            <div className={styles.card}>
-              <FaShieldAlt className={styles.cardIcon} />
-              <h3>Secure Systems</h3>
-              <p>Secure software development with enterprise-level protection.</p>
-            </div>
-            <div className={styles.card}>
-              <FaChartLine className={styles.cardIcon} />
-              <h3>Scalable Architecture</h3>
-              <p>Future-ready architecture designed for scaling businesses.</p>
-            </div>
-            <div className={styles.card}>
-              <FaUsers className={styles.cardIcon} />
-              <h3>Client Focused</h3>
-              <p>Client-focused development tailored to your business goals.</p>
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
-            </div>
-          </div>
-        </div>
-      </section>
-
-<<<<<<< HEAD
       {/* WHAT OUR CLIENTS SAY (INFINITE MARQUEE) */}
       <section className={styles.testimonialSection}>
         <div className={styles.container}>
@@ -445,46 +291,11 @@ function Home() {
                 </div>
               </div>
             ))}
-=======
-      {/* WHAT OUR CLIENTS SAY (TESTIMONIALS SLIDER) */}
-      <section className={styles.section}>
-        <div className={styles.container}>
-          <div className={styles.sectionHeader}>
-            <h2>What Our Clients Say</h2>
-          </div>
-          <div className={styles.testimonialSlider}>
-            <div 
-              className={styles.sliderTrack} 
-              style={{ transform: `translateX(-${activeSlide * 100}%)` }}
-            >
-              {testimonials.map((t) => (
-                <div key={t.id} className={styles.slide}>
-                  <div className={styles.testimonialCard}>
-                    <FaQuoteLeft className={styles.quoteIcon} />
-                    <p className={styles.testimonialText}>{t.text}</p>
-                    <div className={styles.testimonialAuthor}>
-                      <h4>{t.name}</h4>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className={styles.sliderDots}>
-              {testimonials.map((_, i) => (
-                <span 
-                  key={i} 
-                  className={`${styles.dot} ${activeSlide === i ? styles.activeDot : ''}`}
-                  onClick={() => setActiveSlide(i)}
-                />
-              ))}
-            </div>
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
           </div>
         </div>
       </section>
 
       {/* CTA SECTION */}
-<<<<<<< HEAD
       <section className={styles.ctaSection}>
         <div className={styles.ctaBannerWrapper}>
           <div className={styles.ctaBanner}>
@@ -498,15 +309,6 @@ function Home() {
               </button>
             </div>
           </div>
-=======
-      <section className={styles.preFooter}>
-        <div className={styles.container}>
-          <h2>Ready to Build Your Digital Future?</h2>
-          <p>Contact our engineering team today for a free consultation and project roadmap.</p>
-          <button onClick={() => navigate('/contact')} className="ctaButton" style={{ padding: '16px 48px', fontSize: '1.1rem' }}>
-            Get Started Now
-          </button>
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
         </div>
       </section>
     </main>
