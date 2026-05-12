@@ -1,0 +1,413 @@
+<<<<<<< HEAD
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 12px;
+  left: 20px;
+  right: 20px;
+  z-index: 1000;
+  border-radius: 16px;
+
+  background: transparent;
+  backdrop-filter: none;
+  border: 1px solid transparent;
+  transition: all 0.4s ease;
+}
+
+/* GRADIENT BORDER GLOW */
+.navbar::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 16px;
+  background: linear-gradient(120deg, var(--primary-highlight), var(--primary-accent), var(--primary-royal));
+  opacity: 0;
+  z-index: -1;
+  filter: blur(12px);
+  transition: opacity 0.4s ease;
+}
+
+/* SCROLL EFFECT */
+.scrolled {
+  background: var(--nav-bg) !important;
+  backdrop-filter: blur(18px) !important;
+  border: 1px solid var(--nav-border) !important;
+  transform: translateY(-2px) scale(0.99);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.scrolled::before {
+  opacity: var(--nav-glow) !important;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 14px 24px;
+=======
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(11, 31, 58, 0.95); /* Deep Navy semi-transparent by default */
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  padding: 16px 0;
+}
+
+/* When scrolled, we can either keep it dark or switch to light. 
+   The user said "Use dark or semi-transparent background (matching hero theme)".
+   So I'll keep it dark but maybe more solid or slightly different. */
+.scrolled {
+  background: #0B1F3A;
+  padding: 12px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-bottom-color: transparent;
+}
+
+.container {
+  max-width: 1320px;
+  margin: auto;
+  padding: 0 24px;
+>>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+<<<<<<< HEAD
+/* ===== LOGO ===== */
+.logo a {
+  font-size: 1.7rem;
+  font-weight: 900;
+  text-decoration: none;
+
+  background: linear-gradient(90deg, var(--primary-highlight), var(--primary-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  letter-spacing: -0.5px;
+}
+
+/* ===== NAV LINKS ===== */
+.navLinks {
+  display: flex;
+  gap: 30px;
+}
+
+.navLinks a {
+  color: #FFFFFF; /* White on hero by default */
+  opacity: 0.9;
+  font-size: 0.95rem;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.scrolled .navLinks a {
+  color: var(--nav-link); /* Themed color on scroll (Black in Orange) */
+  opacity: 0.8;
+}
+
+/* COOL HOVER EFFECT */
+.navLinks a:hover {
+  color: var(--primary-highlight);
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* GRADIENT UNDERLINE */
+.navLinks a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #a855f7);
+  transform: translateX(-50%);
+  transition: 0.3s ease;
+  border-radius: 10px;
+=======
+.logo a {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  text-decoration: none;
+  letter-spacing: -1px;
+  transition: var(--transition);
+}
+
+.logo a:hover {
+  color: var(--primary-highlight);
+}
+
+/* NAV LINKS */
+.navLinks {
+  display: flex;
+  gap: 32px;
+}
+
+.navLinks a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: var(--transition);
+  position: relative;
+}
+
+.navLinks a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-highlight);
+  transition: var(--transition);
+}
+
+.navLinks a:hover {
+  color: #FFFFFF;
+>>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+<<<<<<< HEAD
+/* ACTIVE */
+.active {
+  color: var(--primary-highlight) !important;
+  font-weight: 700;
+=======
+/* ACTIVE LINK */
+.active {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+>>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
+}
+
+.active::after {
+  width: 100% !important;
+}
+
+<<<<<<< HEAD
+.colorToggle {
+  background: var(--bg-card);
+  border: 1px solid var(--nav-border);
+  width: 76px; /* Wider for sliding effect */
+  height: 34px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.colorToggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.paletteIcon {
+  position: absolute;
+  right: 10px;
+  font-size: 0.9rem;
+  color: var(--nav-link);
+  opacity: 0.4;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.colorIndicator {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 15px currentColor;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.4s ease;
+  z-index: 2;
+  background-color: #3B82F6;
+}
+
+.wiggle {
+  animation: wiggle 0.4s ease;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px) rotate(-5deg); }
+  50% { transform: translateX(4px) rotate(5deg); }
+  75% { transform: translateX(-2px) rotate(-3deg); }
+}
+
+/* ===== CTA BUTTON ===== */
+.cta {
+  padding: 10px 26px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+
+  color: white;
+  background: linear-gradient(135deg, #2563eb, #9333ea);
+
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: all 0.3s ease;
+}
+
+/* GLOW PULSE */
+.cta:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow:
+    0 10px 25px rgba(59, 130, 246, 0.5),
+    0 0 20px rgba(147, 51, 234, 0.6);
+}
+
+/* ===== RIGHT ===== */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* ===== MENU ICON ===== */
+.menuToggle {
+  display: none;
+  font-size: 1.6rem;
+  color: #FFFFFF; /* White on hero by default */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scrolled .menuToggle {
+  color: var(--nav-link); /* Themed color on scroll (Black in Orange) */
+}
+
+.menuToggle:hover {
+  color: var(--primary-highlight);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 992px) {
+
+=======
+/* CTA BUTTON */
+.cta {
+  padding: 10px 24px;
+  background: linear-gradient(135deg, var(--primary-accent), var(--primary-highlight));
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.4);
+  filter: brightness(1.1);
+}
+
+/* RIGHT SIDE */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* MOBILE */
+.menuToggle {
+  display: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+>>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
+  .navLinks {
+    display: none;
+  }
+
+  .navLinks.open {
+    position: fixed;
+<<<<<<< HEAD
+    inset: 0;
+    background: radial-gradient(circle at top, #1e293b, #020617);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+
+    animation: fadeIn 0.4s ease;
+  }
+
+  .navLinks.open a {
+    font-size: 1.6rem;
+    font-weight: 600;
+=======
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0B1F3A;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 24px;
+    gap: 32px;
+    z-index: 999;
+    align-items: center;
+    text-align: center;
+  }
+
+  .navLinks.open a {
+    font-size: 1.5rem;
+>>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
+    color: white;
+  }
+
+  .menuToggle {
+    display: block;
+<<<<<<< HEAD
+=======
+    position: relative;
+>>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
+    z-index: 1001;
+  }
+
+  .cta {
+    display: none;
+  }
+<<<<<<< HEAD
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+=======
+>>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
+}

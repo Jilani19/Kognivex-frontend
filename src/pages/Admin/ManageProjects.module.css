@@ -1,0 +1,497 @@
+/* ManageProjects.module.css */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+<<<<<<< HEAD
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.searchInput {
+  padding: 12px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 0.9rem;
+  min-width: 300px;
+  transition: all 0.2s ease;
+=======
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.searchInput {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  font-size: 0.875rem;
+  min-width: 250px;
+>>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
+}
+
+.searchInput:focus {
+  outline: none;
+<<<<<<< HEAD
+  border-color: var(--admin-primary);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.filterSelect {
+  padding: 12px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.createBtn {
+  padding: 12px 25px;
+  background: var(--admin-primary);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.createBtn:hover {
+  background: var(--admin-primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px var(--admin-primary-glow);
+}
+
+.tableContainer {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  backdrop-filter: blur(10px);
+=======
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.filterSelect {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.filterSelect:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.createBtn {
+  padding: 0.75rem 1.5rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.createBtn:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.tableContainer {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+>>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+<<<<<<< HEAD
+  min-width: 800px;
+=======
+>>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
+}
+
+.table th,
+.table td {
+<<<<<<< HEAD
+  padding: 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.table th {
+  background: rgba(255, 255, 255, 0.03);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.table td {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+.table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.statusBadge {
+  padding: 5px 12px;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.statusPublished {
+  background: var(--admin-primary-glow);
+  color: var(--admin-primary-light);
+  border: 1px solid var(--admin-primary-glow);
+}
+
+.statusDraft {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.techTag {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.6);
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+=======
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table th {
+  background: #f8fafc;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: sticky;
+  top: 0;
+}
+
+.table td {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.statusBadge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.statusPublished {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.statusDraft {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.techTag {
+  background: #e2e8f0;
+  color: #475569;
+  padding: 0.125rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 500;
+>>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
+}
+
+.actions {
+  display: flex;
+<<<<<<< HEAD
+  gap: 0.75rem;
+}
+
+.actionBtn {
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.editBtn {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.editBtn:hover {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.deleteBtn {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.deleteBtn:hover {
+  background: #ef4444;
+  color: #fff;
+}
+
+.viewBtn {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.viewBtn:hover {
+  background: #10b981;
+  color: #fff;
+=======
+  gap: 0.5rem;
+}
+
+.actionBtn {
+  padding: 0.375rem 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.editBtn {
+  background: #3b82f6;
+  color: white;
+}
+
+.editBtn:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.deleteBtn {
+  background: #dc2626;
+  color: white;
+}
+
+.deleteBtn:hover {
+  background: #b91c1c;
+  transform: translateY(-1px);
+}
+
+.viewBtn {
+  background: #10b981;
+  color: white;
+}
+
+.viewBtn:hover {
+  background: #059669;
+  transform: translateY(-1px);
+>>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: #64748b;
+  font-size: 1.125rem;
+}
+
+.error {
+  background: #fef2f2;
+  color: #dc2626;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #fecaca;
+  margin-bottom: 1rem;
+}
+
+.empty {
+  text-align: center;
+  padding: 3rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+.title {
+  font-weight: 600;
+<<<<<<< HEAD
+  color: #ffffff;
+=======
+  color: #1e293b;
+>>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 300px;
+}
+
+.date {
+  color: #64748b;
+  font-size: 0.75rem;
+}
+
+/* Responsive */
+<<<<<<< HEAD
+@media (max-width: 1024px) {
+  .header {
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+=======
+>>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+<<<<<<< HEAD
+    gap: 1.25rem;
+  }
+
+  .filters {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .searchInput {
+    min-width: 100%;
+  }
+
+  .filterSelect {
+    width: 100%;
+  }
+
+  .createBtn {
+    justify-content: center;
+    padding: 1rem;
+=======
+  }
+
+  .filters {
+    justify-content: space-between;
+  }
+
+  .searchInput {
+    min-width: 200px;
+    flex: 1;
+>>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
+  }
+
+  .table th,
+  .table td {
+<<<<<<< HEAD
+    padding: 1rem 0.75rem;
+  }
+
+  .actions {
+    gap: 0.5rem;
+  }
+
+  .title {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    margin-bottom: 1.5rem;
+  }
+
+  .title {
+    max-width: 180px;
+=======
+    padding: 0.75rem 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .actionBtn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .title {
+    max-width: 150px;
+  }
+
+  .technologies {
+    max-width: 150px;
+  }
+
+  .techTag {
+    font-size: 0.65rem;
+>>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
+  }
+}
