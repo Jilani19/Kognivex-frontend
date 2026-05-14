@@ -1,69 +1,70 @@
 const fs = require('fs');
 const path = require('path');
 
-const extensions = [
-  '.js',
-  '.jsx',
-  '.ts',
-  '.tsx',
-  '.json',
-  '.css',
-  '.scss',
-  '.html',
-  '.md',
-  '.yml',
-  '.yaml'
-];
+function cleanConflicts(filePath) {
+  let content = fs.readFileSync(filePath, 'utf8');
 
-function resolveConflicts(content) {
-  const regex =
-    /<<<<<<< HEAD\r?\n([\s\S]*?)=======\r?\n([\s\S]*?)>>>>>>> .*?\r?\n/g;
+  if (!content.includes('<<<<<<<')) return;
 
-  return content.replace(regex, (_, headContent) => {
-    return headContent.trim() + '\n';
-  });
+  const lines = content.split('\n');
+  const cleaned = [];
+
+  let skip = false;
+
+  for (let line of lines) {
+    if (line.startsWith('<<<<<<<')) {
+      skip = true;
+      continue;
+    }
+
+    if (line.startsWith('=======')) {
+      continue;
+    }
+
+    if (line.startsWith('>>>>>>>')) {
+      skip = false;
+      continue;
+    }
+
+    if (!skip) {
+      cleaned.push(line);
+    }
+  }
+
+  fs.writeFileSync(filePath, cleaned.join('\n'), 'utf8');
+  console.log('Fixed:', filePath);
 }
 
-function resolveConflictsInDir(dir) {
+function walkDir(dir) {
   const files = fs.readdirSync(dir);
 
   for (const file of files) {
     const fullPath = path.join(dir, file);
 
-    // Skip node_modules and .git
-    if (
-      fullPath.includes('node_modules') ||
-      fullPath.includes('.git')
-    ) {
+    if (fullPath.includes('node_modules') || fullPath.includes('.git')) {
       continue;
     }
 
     const stat = fs.statSync(fullPath);
 
     if (stat.isDirectory()) {
-      resolveConflictsInDir(fullPath);
-    } else if (
-      stat.isFile() &&
-      extensions.includes(path.extname(fullPath))
-    ) {
-      let content = fs.readFileSync(fullPath, 'utf8');
+      walkDir(fullPath);
+    } else {
+      const ext = path.extname(fullPath);
+      const allowed = [
+        '.js', '.jsx', '.ts', '.tsx',
+        '.css', '.scss', '.json',
+        '.html', '.md', '.yml', '.yaml'
+      ];
 
-      if (
-        content.includes('<<<<<<< HEAD') &&
-        content.includes('=======') &&
-        content.includes('>>>>>>>')
-      ) {
-        const newContent = resolveConflicts(content);
-
-        if (content !== newContent) {
-          fs.writeFileSync(fullPath, newContent, 'utf8');
-          console.log(`Resolved conflicts in: ${fullPath}`);
-        }
+      if (allowed.includes(ext)) {
+        cleanConflicts(fullPath);
       }
     }
   }
 }
 
-resolveConflictsInDir(__dirname);
+// Run from project root
+walkDir(process.cwd());
 
-console.log('Done resolving conflicts.');
+console.log('✅ All merge conflicts removed');
