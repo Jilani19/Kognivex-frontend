@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .blogPage {
   background: var(--bg-main) !important;
   background-image: 
@@ -7,10 +6,10 @@
   color: var(--text-body);
   min-height: 100vh;
   transition: background 0.5s ease;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden;
 }
 
-/* HERO SECTION - SYNCED WITH PROJECTS */
+/* HERO SECTION */
 .heroSection {
   background: linear-gradient(rgba(2, 6, 23, 0.75), rgba(2, 6, 23, 0.95)), url('../../assets/hero-bg.png');
   background-size: cover;
@@ -60,7 +59,7 @@
   padding: 0 40px;
 }
 
-/* CATEGORY FILTERS - SYNCED WITH PROJECTS */
+/* CATEGORY FILTERS */
 .filterSection {
   padding: 60px 0 40px;
 }
@@ -108,7 +107,7 @@
 }
 
 .scrollArrow {
-  display: none; /* Hidden on desktop */
+  display: none;
 }
 
 .categoryFilters {
@@ -200,93 +199,6 @@
   font-size: 1.8rem;
   color: var(--text-heading);
   margin-bottom: 15px;
-=======
-/* PAGE BACKGROUND */
-.blogPage {
-  background: #F7F9FC;
-}
-
-/* HERO */
-.hero {
-  background: linear-gradient(135deg, #0B1F3A 0%, #1E3A8A 100%);
-  padding: 140px 0 90px;
-  text-align: center;
-  color: white;
-}
-
-.container_hero {
-  max-width: 850px;
-  margin: auto;
-  padding: 0 24px;
-}
-
-.hero h1 {
-  font-size: clamp(2.5rem, 7vw, 3.8rem);
-  font-weight: 800;
-  margin-bottom: 24px;
-}
-
-.hero span {
-  color: #3B82F6;
-}
-
-.hero p {
-  color: #E2E8F0;
-  font-size: 1.25rem;
-  line-height: 1.7;
-}
-
-.container {
-  padding: 90px 24px;
-  max-width: 1200px;
-  margin: auto;
-  min-height: 100vh;
-}
-
-/* CATEGORY FILTERS */
-.categoryFilters {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 40px;
-}
-
-.categoryBtn {
-  padding: 10px 20px;
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 30px;
-  color: #475569;
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.categoryBtn:hover {
-  background: #F8FAFC;
-  border-color: #CBD5E1;
-  color: #0F172A;
-}
-
-.activeCategoryBtn {
-  background: #2563EB;
-  color: #FFFFFF;
-  border-color: #2563EB;
-}
-
-.activeCategoryBtn:hover {
-  background: #1D4ED8;
-  color: #FFFFFF;
-}
-
-/* BLOG GRID */
-.blogContainer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
 }
 
 /* PAGINATION */
@@ -294,10 +206,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-<<<<<<< HEAD
   gap: 10px;
   padding-bottom: 100px;
-  flex-wrap: wrap; /* Allow wrapping on small screens */
+  flex-wrap: wrap;
 }
 
 .pageBtn {
@@ -326,26 +237,6 @@
   color: #FFFFFF !important;
   border-color: var(--primary-highlight) !important;
   box-shadow: 0 8px 15px rgba(var(--primary-rgb), 0.3);
-=======
-  gap: 12px;
-  margin-top: 60px;
-}
-
-.pageBtn {
-  padding: 10px 16px;
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 8px;
-  color: #475569;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.pageBtn:hover:not(:disabled) {
-  background: #F1F5F9;
-  color: #0F172A;
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
 }
 
 .pageBtn:disabled {
@@ -353,7 +244,6 @@
   cursor: not-allowed;
 }
 
-<<<<<<< HEAD
 @media (max-width: 1200px) {
   .blogContainer {
     grid-template-columns: repeat(2, 1fr);
@@ -378,7 +268,6 @@
     font-size: 1.1rem;
   }
 
-  /* Mobile Categories Scroll */
   .filterSection {
     padding: 30px 0;
   }
@@ -402,14 +291,19 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
 
-  .scrollArrow:first-child { left: 5px; }
-  .scrollArrow:last-child { right: 5px; }
+  .scrollArrow:first-child {
+    left: 5px;
+  }
+
+  .scrollArrow:last-child {
+    right: 5px;
+  }
 
   .categoryFilters {
     justify-content: flex-start;
     flex-wrap: nowrap;
     overflow-x: auto;
-    padding: 5px 30px 15px; /* Space for arrows */
+    padding: 5px 30px 15px;
     gap: 10px;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
@@ -441,23 +335,3 @@
     font-size: 0.85rem;
   }
 }
-=======
-.activePageBtn {
-  background: #2563EB;
-  color: #FFFFFF;
-  border-color: #2563EB;
-}
-
-/* RESPONSIVE */
-@media (max-width: 992px) {
-  .blogContainer {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .blogContainer {
-    grid-template-columns: 1fr;
-  }
-}
->>>>>>> d4bf575de42c8907934c015290dc9c876c5de6de
